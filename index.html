@@ -8,18 +8,28 @@
     <title>LeafLet</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./styles/MarkerCluster.css">
+    <link rel="stylesheet" href="./styles/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <link rel="stylesheet" href="./styles/MarkerCluster.css">
-        <link rel="stylesheet" href="./styles/MarkerCluster.Default.css">
-        <script src="./scripts/leaflet.markercluster.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="./scripts/leaflet.markercluster.js"></script>
+
 </head>
 
 <body>
     <h1>LeafLet</h1>
     <div id="map"></div>
+    <button class="build__route">Build route</button>
+    <script src="./scripts/initial.js"></script>
+    <script src="./scripts/popup.js"></script>
+    <script src="./scripts/map.js"></script>
+    <script src="./scripts/location.js"></script>
+    <script src="./scripts/routes.js"></script>
     <script src="./scripts/index.js"></script>
+
 </body>
 
 </html>
