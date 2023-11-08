@@ -9,7 +9,7 @@ async function installMap(coord) {
 }
 async function initialMap() {
     let address = await getAddress();
-    await getCenterMap(stateCoords.USER);
+    await getCenterMap(stateCoords.CITY);
     setMarkers(address);
     map.addLayer(markers)
 }
@@ -20,7 +20,17 @@ function setMarkers(addr) {
 }
 // //отмечаем отдельный маркер
 async function setOnlyMarker(obj) {
-    let marker = L.marker([obj.coord.latitude, obj.coord.longitude]);
+    let logo = L.icon({
+        iconUrl: obj.logo,
+        // shadowUrl: 'imag/food.svg',
+    
+        iconSize:     [38, 95], // size of the icon
+        // shadowSize:   [50, 64], // size of the shadow
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        // shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -66] // point from which the popup should open relative to the iconAnchor
+    });
+    let marker = L.marker([obj.coord.latitude, obj.coord.longitude], {icon: logo});
     paintPopup(obj, marker);
     markers.addLayer(marker);
 }
